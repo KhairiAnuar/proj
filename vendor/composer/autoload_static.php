@@ -6,9 +6,24 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit7a45924cd636e0510b1ff50c78fc7cf5
 {
+    public static $prefixesPsr0 = array (
+        'U' => 
+        array (
+            'Unirest\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/mashape/unirest-php/src',
+            ),
+            'Unirest' => 
+            array (
+                0 => __DIR__ . '/../..' . '/lib',
+            ),
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixesPsr0 = ComposerStaticInit7a45924cd636e0510b1ff50c78fc7cf5::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
